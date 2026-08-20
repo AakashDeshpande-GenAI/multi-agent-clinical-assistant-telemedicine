@@ -1,0 +1,53 @@
+[
+  {
+    "symptom_rubric": "headache throbbing nausea afternoon sun heat fever",
+    "remedies": [
+      {
+        "name": "Glonoinum 30C",
+        "system": "Homeopathy",
+        "justification": "Primary remedy for congestive, throbbing cephalalgia aggravated by sunlight and intense heat.",
+        "probability": "High"
+      },
+      {
+        "name": "Belladonna 30C",
+        "system": "Homeopathy",
+        "justification": "Rapid onset of acute throbbing pain with flushed face and heat sensitivity.",
+        "probability": "High"
+      },
+      {
+        "name": "Pulsatilla",
+        "system": "Homeopathy",
+        "justification": "Thirstless states, better in cool open air (contraindicated for heat-worse).",
+        "probability": "Low"
+      }
+    ]
+  },
+  {
+    "symptom_rubric": "cough cold sore throat fever bodyache viral",
+    "remedies": [
+      {
+        "name": "Ayush Kwath (Kadha)",
+        "system": "Ayurveda",
+        "justification": "Standard Ministry of AYUSH botanical formulation for viral respiratory tract relief.",
+        "probability": "High"
+      },
+      {
+        "name": "Tulsi & Sunthi Decoction",
+        "system": "Home Remedy",
+        "justification": "Soothes pharyngeal inflammation and relieves upper respiratory congestion.",
+        "probability": "Medium"
+      }
+    ]
+  },
+  {
+    "symptom_rubric": "diarrhea dehydration vomiting weakness fatigue",
+    "remedies": [
+      {
+        "name": "Oral Rehydration Salts (ORS)",
+        "system": "Primary Care",
+        "justification": "Essential electrolyte replenishment to prevent circulatory collapse in acute gastroenteritis.",
+        "probability": "Critical-High"
+      }
+    ]
+  }
+]

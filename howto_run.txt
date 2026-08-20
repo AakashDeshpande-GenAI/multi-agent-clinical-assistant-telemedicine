@@ -1,0 +1,27 @@
+=====================================================
+SWASTHYA-AGENT : HOW TO RUN (LOCAL & CLOUD)
+=====================================================
+
+1. LOCAL SETUP & TESTING:
+-------------------------
+a. Open Terminal in 'stream_proj' folder.
+b. Create and activate virtual environment:
+   py -m venv venv
+   .\venv\Scripts\activate  (Windows)
+
+c. Install dependencies:
+   pip install -r requirements.txt
+
+d. Add your Gemini API Key in '.env':
+   GEMINI_API_KEY=your_key_here
+
+e. Launch Streamlit:
+   streamlit run app.py
+
+2. DEPLOYMENT TO STREAMLIT CLOUD:
+----------------------------------
+a. Push this folder to a public GitHub repository.
+b. Go to https://share.streamlit.io and select your repo.
+c. In App Settings -> Secrets, add:
+   GEMINI_API_KEY = "your_actual_api_key_here"
+d. Click Deploy!
