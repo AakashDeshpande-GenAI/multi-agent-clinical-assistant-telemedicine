@@ -171,9 +171,9 @@ def execute_adk_agent(agent_instance, prompt_text: str):
                 if hasattr(part, "text") and part.text:
                     if hasattr(event, "is_final_response") and event.is_final_response():
                         final_text += part.text
-                    event_str += f" | Content: {part.text[:80]}..."
+                    event_str += f"\n  ↳ Text Content:\n{part.text.strip()}"
                 if hasattr(part, "function_call") and part.function_call:
-                    event_str += f" | 🛠️ Tool Call: {part.function_call.name}({part.function_call.args})"
+                    event_str += f"\n  ↳ 🛠️ Tool Call: {part.function_call.name}({part.function_call.args})"
         raw_logs.append(event_str)
                     
     return (final_text if final_text else "Agent execution complete.", "\n".join(raw_logs))
@@ -383,7 +383,7 @@ with tab3:
         st.subheader("📊 Session Memory & Engine Specs")
         st.json({
             "ADK_Version": "2.0.0",
-            "Model_Backbone": "Gemini 2.5 Flash",
+            "Model_Backbone": "Gemini 3.5 Flash Lite",
             "Execution_Mode": "SequentialAgent Pipeline",
             "RAG_Storage": "Local JSON (Embedded Out-of-Core)",
             "Session_ID": "SIH-RURAL-SESSION-01"
