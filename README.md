@@ -1,9 +1,9 @@
 # 🩺 Swasthya-Agent: Multi-Agent Telemedicine Clinical Copilot
-**A Voice-Enabled, Privacy-First Clinical Triage Assistant powered by Google ADK 2.0 & Gemini 2.5 Flash**
+**A Voice-Enabled, Privacy-First Clinical Triage Assistant powered by Google ADK 2.0 & Gemini 3.5 Flash Lite**
 
 [![Smart India Hackathon 2026](https://img.shields.io/badge/SIH-2026_Student_Innovation-orange.svg)](https://www.sih.gov.in/)
 [![Google ADK 2.0](https://img.shields.io/badge/Google_ADK-2.0.0-blue.svg)](https://adk.dev/)
-[![Gemini 2.5 Flash](https://img.shields.io/badge/Gemini-2.5_Flash-green.svg)](https://aistudio.google.com/)
+[![Gemini 3.5 Flash](https://img.shields.io/badge/Gemini-3.5_Flash_Lite-green.svg)](https://aistudio.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Swasthya-Agent is an offline-first, multilingual clinical triage assistant designed for rural Primary Health Centres (PHCs), ASHA workers, and telemedicine kiosks across India.

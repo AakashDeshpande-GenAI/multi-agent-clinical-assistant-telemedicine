@@ -206,7 +206,7 @@ if "raw_input" not in st.session_state:
 if "scrubbed_input" not in st.session_state:
     st.session_state.scrubbed_input = ""
 
-llm = Gemini(model="gemini-2.5-flash")
+llm = Gemini(model="gemini-3.5-flash-lite", temperature=0.0, max_output_tokens=1024)
 
 # -----------------------------------------
 # 5. STREAMLIT 3-TAB UI (HITL & OBSERVABILITY)
