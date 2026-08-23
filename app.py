@@ -152,7 +152,7 @@ def query_local_repertory(extracted_rubrics: str) -> str:
 # 3. ASYNC ADK EXECUTION & TRACE CAPTURE
 # -----------------------------------------
 def execute_adk_agent(agent_instance, prompt_text: str):
-    """Executes an ADK 2.0 Agent using run_debug and returns final text and raw event logs."""
+    """Executes an ADK 2.0 Agent using run_debug and returns final text and untruncated raw event logs."""
     runner = InMemoryRunner(agent=agent_instance)
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
@@ -209,7 +209,8 @@ if "scrubbed_input" not in st.session_state:
 if "execution_latency" not in st.session_state:
     st.session_state.execution_latency = 0.0
 
-llm = Gemini(model="gemini-2.5-flash")
+# Active Model Setup (Deterministic temp=0.0 on Gemini 3.5 Flash Lite)
+llm = Gemini(model="gemini-3.5-flash-lite", temperature=0.0)
 
 # -----------------------------------------
 # 5. STREAMLIT 3-TAB UI (HITL & OBSERVABILITY)
@@ -446,7 +447,7 @@ with tab3:
         st.subheader("📊 Session Memory & Engine Specs")
         st.json({
             "ADK_Version": "2.0.0",
-            "Model_Backbone": "Gemini 2.5 Flash",
+            "Model_Backbone": "Gemini 3.5 Flash Lite",
             "Execution_Mode": "SequentialAgent Pipeline",
             "RAG_Storage": "Local JSON (Embedded Out-of-Core)",
             "Session_ID": "SIH-RURAL-SESSION-01"
@@ -461,7 +462,7 @@ with tab3:
         else:
             st.info("SKILL.md initialized in local directory.")
 
-    # 4. ADK Observability Event Logs
+    # 4. ADK Observability Event Logs (Full Untruncated Trace Stream)
     st.subheader("📡 ADK Observability Event Logs")
     if st.session_state.get("diagnostic_logs"):
         st.markdown("**Diagnostic Agent Telemetry Trace:**")
